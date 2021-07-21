@@ -4,6 +4,7 @@ html {
 
 body {
     background-color: #000019;
+    color: #ffffff;
     font-family: serif;
     margin: 0;
     padding: 0;
@@ -20,17 +21,19 @@ div.header {
 
 img.header-img {
     display: block;
+    transition: opacity 500ms ease;
 }
 
 div.header-start {
     background-color: rgb(0, 156, 65);
     border-radius: 15px;
-    color: #ffffff;
+    cursor: pointer;
     font-size: 2vw;
     height: 6vw;
     left: 58vw;
     position: absolute;
     text-align: center;
     top: 4vw;
+    transition: opacity 500ms ease;
     width: 15vw;
 }
