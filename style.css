@@ -1,0 +1,36 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000019;
+    font-family: serif;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+img {
+    pointer-events: none;
+}
+
+div.header {
+    width: 100%;
+}
+
+img.header-img {
+    display: block;
+}
+
+div.header-start {
+    background-color: rgb(0, 156, 65);
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: 2vw;
+    height: 6vw;
+    left: 58vw;
+    position: absolute;
+    text-align: center;
+    top: 4vw;
+    width: 15vw;
+}
