@@ -48,6 +48,12 @@ let gameData = JSON.parse(`
                     "type": "speech",
                     "charID": "chinese_2",
                     "text": "例文例文例文例文"
+                },
+                {
+                    "type": "riddle",
+                    "charID": "chinese_2",
+                    "img": "china_riddle",
+                    "answer": "こたえ"
                 }
             ]
         }
@@ -136,6 +142,10 @@ function proceedProgressItem(item) {
             case 'speech':
             let charData = getCharData(item.charID);
             printSubtitle(charData.name, charData.icon, item.text, resolve);
+            break;
+
+            case 'riddle':
+            startRiddle();
             break;
 
             default:
