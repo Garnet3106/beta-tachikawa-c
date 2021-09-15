@@ -19,14 +19,15 @@ body {
     width: 100vw;
 }
 
-.content {
+body > .content {
     height: 100vh;
     width: 100vw;
 }
 
-.content > .background {
+body > .content > .background {
     align-items: center;
     background-image: url('../lib/img/back/test.jpg');
+    background-color: rgba(0, 0, 0, 0.3);
     background-position: center;
     background-repeat: none;
     background-size: 100% 100%;
@@ -37,7 +38,7 @@ body {
     width: 100%;
 }
 
-.content > .background > .title {
+body > .content > .background > .title {
     background-color: #fad46d;
     border-radius: 10%;
     font-family: 'Yusei Magic';
@@ -47,7 +48,7 @@ body {
     width: fit-content;
 }
 
-.content > .background > .subtitle {
+body > .content > .background > .subtitle {
     background-color: rgba(230, 230, 230, 0.85);
     cursor: pointer;
     display: flex;
@@ -56,7 +57,7 @@ body {
     width: 100%;
 }
 
-.content > .background > .subtitle > .char {
+body > .content > .background > .subtitle > .char {
     align-items: center;
     bottom: 60px;
     display: flex;
@@ -64,28 +65,94 @@ body {
     position: relative;
 }
 
-.content > .background > .subtitle > .char > .icon {
+body > .content > .background > .subtitle > .char > .icon {
     background-color: #a4c0eb;
     border-radius: 10%;
     height: 18vh;
     width: 18vh;
 }
 
-.content > .background > .subtitle > .char > .name {
+body > .content > .background > .subtitle > .char > .name {
     font-size: 90%;
     text-shadow: 0 3px 3px #999999;
 }
 
-.content > .background > .subtitle > .text {
+body > .content > .background > .subtitle > .text {
     text-shadow: 0 3px 3px #999999;
     height: fit-content;
     margin: 15px 0;
     width: 60%;
 }
 
-.content > .background > .subtitle > .next-icon {
+body > .content > .background > .subtitle > .next-icon {
     font-size: 150%;
     height: fit-content;
     margin-top: 15vh;
     position: relative;
+}
+
+body > .content > .background > .riddle {
+    align-items: center;
+    /* flex-box */
+    display: none;
+    bottom: 20vh;
+    position: relative;
+}
+
+body > .content > .background > .riddle > .char {
+    background-color: rgba(200, 200, 200, 0.85);
+    border-radius: 15px;
+    align-items: center;
+    bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding: 15px;
+    position: relative;
+}
+
+body > .content > .background .riddle > .char > .name {
+    font-size: 90%;
+    text-shadow: 0 3px 3px #666666;
+}
+
+body > .content > .background > .riddle > .char > .icon {
+    background-color: #a4c0eb;
+    border-radius: 10%;
+    height: 18vh;
+    width: 18vh;
+}
+
+body > .content > .background > .riddle > .content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;
+    width: 60vw;
+}
+
+body > .content > .background > .riddle > .content > .image {
+    background-color: #eeeeee;
+    border-radius: 10px;
+    height: 50vh;
+    width: 60vw;
+}
+
+body > .content > .background > .riddle > .content > .input {
+    display: block;
+    background-color: #eeeeee;
+    border: 1px solid #202020;
+    border-radius: 10px;
+    font-size: 35px;
+    font-weight: bold;
+    height: 50px;
+    line-height: 2em;
+    margin-top: 2vh;
+    outline: none;
+    text-align: center;
+    width: 40vw;
+}
+
+body > .content > .background > .riddle > .content > .input::placeholder {
+    color: #aaaaaa;
 }

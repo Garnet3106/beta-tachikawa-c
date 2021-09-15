@@ -1,3 +1,5 @@
+'use strict';
+
 // note: サブタイトル入力時以外は null
 let subtitleInterval = null;
 
@@ -6,27 +8,35 @@ $(() => {
     printSubtitle('テキストテキストテキストテキスト');
 
     setTimeout(() => {
-        printSubtitle('テストテストテストテストテストテスト');
-    }, 3663);
+        printSubtitle('テストテストテストテストテストテスト', () => {
+            setTimeout(() => {
+                startRiddle();
+            }, 800);
+        });
+    }, 2500);
 });
 
-function printSubtitle(text) {
-    function invalidateSubtitle(interval) {
+function printSubtitle(text, callback) {
+    function invalidateSubtitle() {
         clearInterval(subtitleInterval);
         subtitleInterval = null;
+
+        if(callback !== undefined) {
+            callback();
+        }
     }
 
     let $subtitleText = $('#subtitleText');
     $subtitleText.text('');
 
     if(subtitleInterval !== null) {
-        invalidateSubtitle(subtitleInterval);
+        invalidateSubtitle();
     }
 
     let char_i = 0;
     subtitleInterval = setInterval(() => {
         if(subtitleInterval === null || char_i >= text.length) {
-            invalidateSubtitle(subtitleInterval);
+            invalidateSubtitle();
             return;
         }
 
@@ -54,4 +64,11 @@ function validateSubtitleIconFlash() {
             isHidden = !isHidden;
         }
     }, 500);
+}
+
+function startRiddle() {
+    $('#subtitle').css('display', 'none');
+    $('#riddle').css('display', 'flex');
+    $('#answerInput').focus();
+    $('#background').css('background-blend-mode', 'darken');
 }
