@@ -1,30 +1,55 @@
 'use strict';
 
+/* 初期化 */
+
 // note: サブタイトル入力時以外は null
 let subtitleInterval = null;
 
 $(() => {
-    validateSubtitleIconFlash();
-    printSubtitle('テキストテキストテキストテキスト');
+    $('#answerInput').on('click', onAnswerInputClick);
 
-    setTimeout(() => {
-        printSubtitle('テストテストテストテストテストテスト', () => {
-            setTimeout(() => {
-                startRiddle();
-            }, 800);
-        });
-    }, 2500);
+    validateSubtitleIconFlash();
+
+    // printSubtitle('テキストテキストテキストテキスト');
+
+    // setTimeout(() => {
+    //     printSubtitle('テストテストテストテストテストテスト', () => {
+    //         setTimeout(() => {
+    //             startRiddle();
+    //         }, 1000);
+    //     });
+    // }, 0);
 });
 
-function printSubtitle(text, callback) {
-    function invalidateSubtitle() {
+/* イベント */
+
+function onAnswerInputClick(_event) {
+    let answerInput = $('#answerInput').value;
+
+    console.log(answerInput);
+}
+
+/* UI処理 */
+
+function printSubtitle(charName, charIconURI, text, callback) {
+    function invalidateSubtitle(runCallback) {
         clearInterval(subtitleInterval);
         subtitleInterval = null;
 
-        if(callback !== undefined) {
+        if((runCallback === undefined || runCallback) && callback !== undefined) {
             callback();
         }
     }
+
+    let $subtitle = $('#subtitle');
+    $subtitle.on('click', () => {
+        $subtitle.off('click');
+        invalidateSubtitle();
+        return;
+    });
+
+    $('#subtitleCharName').text(charName);
+    $('#subtitleCharIcon').css('background-image', charIconURI);
 
     let $subtitleText = $('#subtitleText');
     $subtitleText.text('');
@@ -35,8 +60,13 @@ function printSubtitle(text, callback) {
 
     let char_i = 0;
     subtitleInterval = setInterval(() => {
-        if(subtitleInterval === null || char_i >= text.length) {
+        if(subtitleInterval === null) {
             invalidateSubtitle();
+            return;
+        }
+
+        if(char_i >= text.length) {
+            invalidateSubtitle(false);
             return;
         }
 
@@ -64,6 +94,10 @@ function validateSubtitleIconFlash() {
             isHidden = !isHidden;
         }
     }, 500);
+}
+
+function setBackgroundImage(uri) {
+    $('#background').css('background-image', `url(${uri})`);
 }
 
 function startRiddle() {

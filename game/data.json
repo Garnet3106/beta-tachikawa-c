@@ -1,0 +1,35 @@
+{
+    "heros": {
+        "hero": {
+            "name": "主人公",
+            "furigana": "しゅじんこう"
+        }
+    },
+    "countries": [
+        {
+            "name": "中国",
+            "chars": {
+                "chinese_1": {
+                    "name": "中国人1",
+                    "furigana": "ちゅうごくじん1"
+                },
+                "chinese_2": {
+                    "name": "中国人2",
+                    "furigana": "ちゅうごくじん2"
+                }
+            },
+            "progress": [
+                {
+                    "type": "speech",
+                    "charID": "chinese_1",
+                    "text": "你好！ (こんにちは！)"
+                },
+                {
+                    "type": "speech",
+                    "charID": "hero",
+                    "text": "我在学汉语呢！"
+                }
+            ]
+        }
+    ]
+}

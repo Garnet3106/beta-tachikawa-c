@@ -5,6 +5,8 @@
         <meta charset="UTF-8">
         <script src="../lib/js/jquery-3.6.0.min.js">
         </script>
+        <script src="progress.js">
+        </script>
         <script src="script.js">
         </script>
         <title>世界一周と未知の遭遇 (仮)</title>
@@ -12,19 +14,17 @@
     <body>
         <div class="content">
             <div class="background" id="background">
-                <div class="title">
-                    中国
+                <div class="title" id="title">
                 </div>
                 <div class="subtitle" id="subtitle">
                     <div class="char">
-                        <div class="icon">
+                        <div class="icon" id="subtitleCharIcon">
                         </div>
-                        <div class="name">
+                        <div class="name" id="subtitleCharName">
                             わたし
                         </div>
                     </div>
                     <div class="text" id="subtitleText">
-                        ほにゃららほにゃらら
                     </div>
                     <div class="next-icon" id="subtitleNextIcon">
                         ↵
@@ -32,16 +32,20 @@
                 </div>
                 <div class="riddle" id="riddle">
                     <div class="char">
-                        <div class="icon">
+                        <div class="icon" id="riddleCharIcon">
                         </div>
-                        <div class="name">
-                            わたし
+                        <div class="name" id="riddleCharName">
                         </div>
                     </div>
                     <div class="content">
                         <div class="image">
                         </div>
-                        <input class="input" id="answerInput" placeholder="答えを入力" type="text">
+                        <div class="input-area">
+                            <input class="input" id="answerInput" placeholder="答えを入力" type="text">
+                            <div class="check-btn" id="answerCheckBtn">
+                                ➔
+                            </div>
+                        </div>
                     </div>
                     <div class="char">
                         <div class="icon">

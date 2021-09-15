@@ -26,7 +26,6 @@ body > .content {
 
 body > .content > .background {
     align-items: center;
-    background-image: url('../lib/img/back/test.jpg');
     background-color: rgba(0, 0, 0, 0.3);
     background-position: center;
     background-repeat: none;
@@ -138,21 +137,37 @@ body > .content > .background > .riddle > .content > .image {
     width: 60vw;
 }
 
-body > .content > .background > .riddle > .content > .input {
+body > .content > .background > .riddle > .content > .input-area {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+body > .content > .background > .riddle > .content > .input-area > .input {
     display: block;
     background-color: #eeeeee;
     border: 1px solid #202020;
     border-radius: 10px;
-    font-size: 35px;
+    font-size: 70%;
     font-weight: bold;
     height: 50px;
     line-height: 2em;
-    margin-top: 2vh;
+    margin-top: 3vh;
     outline: none;
     text-align: center;
     width: 40vw;
 }
 
-body > .content > .background > .riddle > .content > .input::placeholder {
+body > .content > .background > .riddle > .content > .input-area > .input::placeholder {
     color: #aaaaaa;
+}
+
+body > .content > .background > .riddle > .content .input-area > .check-btn {
+    background-color: #ebd884;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 90%;
+    font-weight: bold;
+    margin: 3vh 0 0 3vh;
+    padding: 0 10px;
 }
