@@ -9,6 +9,7 @@
 }
 
 body {
+    background-color: #cccccc;
     color: #202020;
     font-family: 'Noto Serif JP';
     font-size: 5vh;
@@ -34,6 +35,8 @@ body > .content > .background {
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
+    opacity: 0;
+    transition: opacity 500ms;
     width: 100%;
 }
 

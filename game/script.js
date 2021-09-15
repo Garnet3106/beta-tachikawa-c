@@ -6,7 +6,7 @@
 let subtitleInterval = null;
 
 $(() => {
-    $('#answerInput').on('click', onAnswerInputClick);
+    $('#answerCheckBtn').on('click', onAnswerCheckBtnClick);
 
     validateSubtitleIconFlash();
 
@@ -23,8 +23,8 @@ $(() => {
 
 /* イベント */
 
-function onAnswerInputClick(_event) {
-    let answerInput = $('#answerInput').value;
+function onAnswerCheckBtnClick(_event) {
+    let answerInput = $('#answerInput').val();
 
     console.log(answerInput);
 }
@@ -96,8 +96,21 @@ function validateSubtitleIconFlash() {
     }, 500);
 }
 
-function setBackgroundImage(uri) {
-    $('#background').css('background-image', `url(${uri})`);
+function setBackgroundImage(uri, callback) {
+    let $background = $('#background');
+    $background.css('opacity', '0');
+
+    setTimeout(() => {
+        $('#subtitleText').text('');
+        $('#subtitleCharName').text('');
+
+        $background.css('background-image', `url(${uri})`);
+        $background.css('opacity', '1');
+
+        setTimeout(() => {
+            callback();
+        }, 500);
+    }, 500);
 }
 
 function startRiddle() {

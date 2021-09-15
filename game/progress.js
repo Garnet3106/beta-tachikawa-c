@@ -91,9 +91,11 @@ function getCharData(charID) {
 }
 
 $(() => {
-    let chinaID = countryIDEnum.china;
-    moveToCountry(chinaID);
-    startCountryProgress(chinaID);
+    setTimeout(() => {
+        let chinaID = countryIDEnum.china;
+        moveToCountry(chinaID);
+        startCountryProgress(chinaID);
+    }, 500);
 });
 
 function alertErr(msg) {
@@ -120,8 +122,8 @@ function startCountryProgress(countryID) {
                     return;
                 }
 
-                proceedNextProgressItem();
                 index += 1;
+                proceedNextProgressItem();
             })
             .catch(() => {
                 alertErr('進行の読み込みに失敗しました。');
@@ -135,8 +137,7 @@ function proceedProgressItem(item) {
     return new Promise((resolve, _reject) => {
         switch(item.type) {
             case 'background':
-            setBackgroundImage(`../lib/img/background/${item.uri}`);
-            resolve();
+            setBackgroundImage(`../lib/img/background/${item.uri}`, resolve);
             break;
 
             case 'speech':
