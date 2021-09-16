@@ -121,6 +121,7 @@ function startRiddle(heroName, heroIconURI, questionerName, questionerIconURI, i
         $subtitle.css('display', 'none');
         $riddle.css('display', 'flex');
         $riddleImg.css('background-image', `url('${imgURI}')`);
+        $background.css('background-blend-mode', 'darken');
 
         // note: なぜか transition が効かないので 50ms 遅らせる
         setTimeout(() => {
@@ -129,23 +130,22 @@ function startRiddle(heroName, heroIconURI, questionerName, questionerIconURI, i
 
         setTimeout(() => {
             $answerInput.focus();
-            $background.css('background-blend-mode', 'darken');
 
             let $answerClickBtn = $('#answerCheckBtn');
             $answerClickBtn.on('click', () => {
                 let answerInput = $('#answerInput').val();
-                // 答えをフォーマットする
+                // todo: 答えをフォーマットする
 
                 if(answer == answerInput) {
                     $answerClickBtn.off('click');
 
-                    $subtitle.css('display', 'flex');
                     $riddle.css('opacity', '0');
                     $riddleImg.css('background-image', 'unset');
                     $background.css('background-blend-mode', 'normal');
 
                     setTimeout(() => {
                         $riddle.css('display', 'none');
+                        $subtitle.css('display', 'flex');
                         callback();
                     }, 1000);
                 } else {

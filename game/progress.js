@@ -15,6 +15,11 @@ let gameData = JSON.parse(`
             "name": "中国人2",
             "icon": "chinese_2.png",
             "furigana": "ちゅうごくじん2"
+        },
+        "australian": {
+            "name": "オーストラリア人",
+            "icon": "chinese_2.png",
+            "furigana": "おーすとらりあじん"
         }
     },
     "countries": {
@@ -31,40 +36,32 @@ let gameData = JSON.parse(`
                     "text": "例文例文例文例文"
                 },
                 {
+                    "type": "move",
+                    "countryID": "australia"
+                }
+            ]
+        },
+        "australia": {
+            "name": "オーストラリア",
+            "progress": [
+                {
                     "type": "background",
-                    "uri": "test.jpg"
+                    "uri": "australia.jpg"
                 },
                 {
                     "type": "speech",
-                    "charID": "hero",
-                    "text": "主人公の台詞1"
+                    "charID": "australian",
+                    "text": "Hello, mates!"
                 },
                 {
-                    "type": "riddle",
-                    "questionerCharID": "chinese_2",
-                    "img": "test.png",
-                    "answer": "a"
-                },
-                {
-                    "type": "speech",
-                    "charID": "chinese_2",
-                    "text": "主人公の台詞2"
-                },
-                {
-                    "type": "speech",
-                    "charID": "hero",
-                    "text": "主人公の台詞3"
+                    "type": "move",
+                    "countryID": "china"
                 }
             ]
         }
     }
 }
 `);
-
-// {
-//     "type": "move",
-//     "countryID": "china"
-// },
 
 let countryIDEnum = {
     china: 'china',
@@ -94,7 +91,6 @@ $(() => {
     setTimeout(() => {
         let chinaID = countryIDEnum.china;
         moveToCountry(chinaID);
-        startCountryProgress(chinaID);
     }, 500);
 });
 
@@ -105,6 +101,7 @@ function alertErr(msg) {
 function moveToCountry(countryID) {
     let countryData = getCountryData(countryID);
     $('#title').text(countryData.name);
+    startCountryProgress(countryID);
 }
 
 function startCountryProgress(countryID) {
@@ -151,6 +148,10 @@ function proceedProgressItem(item) {
                 let questionerCharData = getCharData(item.questionerCharID);
                 startRiddle(heroCharData.name, `../lib/img/chars/${heroCharData.icon}`, questionerCharData.name, `../lib/img/chars/${questionerCharData.icon}`, `../lib/img/riddles/${item.img}`, item.answer, resolve);
             } break;
+
+            case 'move':
+            moveToCountry(item.countryID);
+            break;
 
             default:
             alertErr('存在しないゲーム進行の種類です。');
