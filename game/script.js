@@ -105,7 +105,7 @@ function setBackgroundImage(uri, callback) {
     }, 1000);
 }
 
-function startRiddle(heroName, heroIconURI, questionerName, questionerIconURI, imgURI, answer, callback) {
+function startRiddle(heroName, heroIconURI, questionerName, questionerIconURI, imgURI, hintImgURI, descImgURI, answer, callback) {
     return new Promise(() => {
         let $subtitle = $('#subtitle');
         let $riddle = $('#riddle');
@@ -122,6 +122,7 @@ function startRiddle(heroName, heroIconURI, questionerName, questionerIconURI, i
         $riddle.css('display', 'flex');
         $riddleImg.css('background-image', `url('${imgURI}')`);
         $background.css('background-blend-mode', 'darken');
+        $answerInput.val('');
 
         // note: なぜか transition が効かないので 50ms 遅らせる
         setTimeout(() => {

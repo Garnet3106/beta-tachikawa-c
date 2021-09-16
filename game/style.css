@@ -154,6 +154,15 @@ body > .content > .background > .riddle > .content > .image {
     width: 40vw;
 }
 
+body > .content > .background > .riddle > .content > .hint-btn {
+    background-color: #ebd884;
+    cursor: pointer;
+    font-size: 60%;
+    border-radius: 5px;
+    margin-top: 3vh;
+    padding: 5px 10px;
+}
+
 body > .content > .background > .riddle > .content > .input-area {
     align-items: center;
     display: flex;
