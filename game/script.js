@@ -6,17 +6,11 @@
 let subtitleInterval = null;
 
 $(() => {
+    $(window).on('beforeunload', function(e) {
+        return '';
+    });
+
     validateSubtitleIconFlash();
-
-    // printSubtitle('テキストテキストテキストテキスト');
-
-    // setTimeout(() => {
-    //     printSubtitle('テストテストテストテストテストテスト', () => {
-    //         setTimeout(() => {
-    //             startRiddle();
-    //         }, 1000);
-    //     });
-    // }, 0);
 });
 
 /* UI処理 */
@@ -32,6 +26,7 @@ function printSubtitle(charName, charIconURI, text, callback) {
     }
 
     let $subtitle = $('#subtitle');
+
     $subtitle.on('click', () => {
         $subtitle.off('click');
         invalidateSubtitle();
@@ -110,6 +105,7 @@ function startRiddle(heroName, heroIconURI, questionerName, questionerIconURI, i
         let $subtitle = $('#subtitle');
         let $riddle = $('#riddle');
         let $riddleImg = $('#riddleImg');
+        let $riddleHintBtn = $('#riddleHintBtn');
         let $answerInput = $('#answerInput');
         let $background = $('#background');
 
@@ -123,6 +119,14 @@ function startRiddle(heroName, heroIconURI, questionerName, questionerIconURI, i
         $riddleImg.css('background-image', `url('${imgURI}')`);
         $background.css('background-blend-mode', 'darken');
         $answerInput.val('');
+
+        $riddleHintBtn.on('click', (_e) => {
+            $riddleImg.css('background-image', `url('${hintImgURI}')`);
+
+            setTimeout(() => {
+                $riddleImg.css('background-image', `url('${imgURI}')`);
+            }, 10000);
+        });
 
         // note: なぜか transition が効かないので 50ms 遅らせる
         setTimeout(() => {
@@ -138,7 +142,9 @@ function startRiddle(heroName, heroIconURI, questionerName, questionerIconURI, i
                 // todo: 答えをフォーマットする
 
                 if(answer == answerInput) {
+                    // 正解
                     $answerClickBtn.off('click');
+                    $riddleHintBtn.off('click');
 
                     $riddle.css('opacity', '0');
                     $riddleImg.css('background-image', 'unset');
@@ -150,6 +156,7 @@ function startRiddle(heroName, heroIconURI, questionerName, questionerIconURI, i
                         callback();
                     }, 1000);
                 } else {
+                    // 不正解
                     alert('不正解');
                 }
             });
