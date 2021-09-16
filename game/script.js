@@ -6,8 +6,6 @@
 let subtitleInterval = null;
 
 $(() => {
-    $('#answerCheckBtn').on('click', onAnswerCheckBtnClick);
-
     validateSubtitleIconFlash();
 
     // printSubtitle('テキストテキストテキストテキスト');
@@ -20,14 +18,6 @@ $(() => {
     //     });
     // }, 0);
 });
-
-/* イベント */
-
-function onAnswerCheckBtnClick(_event) {
-    let answerInput = $('#answerInput').val();
-
-    console.log(answerInput);
-}
 
 /* UI処理 */
 
@@ -49,7 +39,7 @@ function printSubtitle(charName, charIconURI, text, callback) {
     });
 
     $('#subtitleCharName').text(charName);
-    $('#subtitleCharIcon').css('background-image', charIconURI);
+    $('#subtitleCharIcon').css('background-image', `url('${charIconURI}')`);
 
     let $subtitleText = $('#subtitleText');
     $subtitleText.text('');
@@ -101,21 +91,67 @@ function setBackgroundImage(uri, callback) {
     $background.css('opacity', '0');
 
     setTimeout(() => {
+        $('#subtitleIcon').css('background-image', 'unset');
         $('#subtitleText').text('');
         $('#subtitleCharName').text('');
+        $('#subtitleCharIcon').css('background-image', 'unset');
 
         $background.css('background-image', `url(${uri})`);
         $background.css('opacity', '1');
 
         setTimeout(() => {
             callback();
-        }, 500);
-    }, 500);
+        }, 1000);
+    }, 1000);
 }
 
-function startRiddle() {
-    $('#subtitle').css('display', 'none');
-    $('#riddle').css('display', 'flex');
-    $('#answerInput').focus();
-    $('#background').css('background-blend-mode', 'darken');
+function startRiddle(heroName, heroIconURI, questionerName, questionerIconURI, imgURI, answer, callback) {
+    return new Promise(() => {
+        let $subtitle = $('#subtitle');
+        let $riddle = $('#riddle');
+        let $riddleImg = $('#riddleImg');
+        let $answerInput = $('#answerInput');
+        let $background = $('#background');
+
+        $('#heroCharIcon').css('background-image', `url(${heroIconURI})`);
+        $('#heroCharName').text(heroName);
+        $('#questionerCharIcon').css('background-image', `url(${questionerIconURI})`);
+        $('#questionerCharName').text(questionerName);
+
+        $subtitle.css('display', 'none');
+        $riddle.css('display', 'flex');
+        $riddleImg.css('background-image', `url('${imgURI}')`);
+
+        // note: なぜか transition が効かないので 50ms 遅らせる
+        setTimeout(() => {
+            $riddle.css('opacity', '1');
+        }, 50);
+
+        setTimeout(() => {
+            $answerInput.focus();
+            $background.css('background-blend-mode', 'darken');
+
+            let $answerClickBtn = $('#answerCheckBtn');
+            $answerClickBtn.on('click', () => {
+                let answerInput = $('#answerInput').val();
+                // 答えをフォーマットする
+
+                if(answer == answerInput) {
+                    $answerClickBtn.off('click');
+
+                    $subtitle.css('display', 'flex');
+                    $riddle.css('opacity', '0');
+                    $riddleImg.css('background-image', 'unset');
+                    $background.css('background-blend-mode', 'normal');
+
+                    setTimeout(() => {
+                        $riddle.css('display', 'none');
+                        callback();
+                    }, 1000);
+                } else {
+                    alert('不正解');
+                }
+            });
+        }, 1000);
+    });
 }

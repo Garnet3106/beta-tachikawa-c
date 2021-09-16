@@ -27,33 +27,33 @@ let gameData = JSON.parse(`
                 },
                 {
                     "type": "speech",
-                    "charID": "chinese_1",
-                    "text": "你好！ (こんにちは！)"
-                },
-                {
-                    "type": "speech",
-                    "charID": "hero",
-                    "text": "我在学汉语呢！"
-                },
-                {
-                    "type": "speech",
-                    "charID": "chinese_2",
-                    "text": "咱们去香港吧！"
-                },
-                {
-                    "type": "background",
-                    "uri": "hongkong.png"
-                },
-                {
-                    "type": "speech",
                     "charID": "chinese_2",
                     "text": "例文例文例文例文"
                 },
                 {
+                    "type": "background",
+                    "uri": "test.jpg"
+                },
+                {
+                    "type": "speech",
+                    "charID": "hero",
+                    "text": "主人公の台詞1"
+                },
+                {
                     "type": "riddle",
+                    "questionerCharID": "chinese_2",
+                    "img": "test.png",
+                    "answer": "a"
+                },
+                {
+                    "type": "speech",
                     "charID": "chinese_2",
-                    "img": "china_riddle",
-                    "answer": "こたえ"
+                    "text": "主人公の台詞2"
+                },
+                {
+                    "type": "speech",
+                    "charID": "hero",
+                    "text": "主人公の台詞3"
                 }
             ]
         }
@@ -116,17 +116,18 @@ function startCountryProgress(countryID) {
     }
 
     function proceedNextProgressItem() {
+        if(index >= progress.length) {
+            return;
+        }
+
         proceedProgressItem(progress[index])
             .then(() => {
-                if(index >= progress.length) {
-                    return;
-                }
-
                 index += 1;
                 proceedNextProgressItem();
             })
-            .catch(() => {
+            .catch((e) => {
                 alertErr('進行の読み込みに失敗しました。');
+                console.error(e);
             });
     }
 
@@ -140,14 +141,16 @@ function proceedProgressItem(item) {
             setBackgroundImage(`../lib/img/background/${item.uri}`, resolve);
             break;
 
-            case 'speech':
-            let charData = getCharData(item.charID);
-            printSubtitle(charData.name, charData.icon, item.text, resolve);
-            break;
+            case 'speech': {
+                let charData = getCharData(item.charID);
+                printSubtitle(charData.name, `../lib/img/chars/${charData.icon}`, item.text, resolve);
+            } break;
 
-            case 'riddle':
-            startRiddle();
-            break;
+            case 'riddle': {
+                let heroCharData = getCharData('hero');
+                let questionerCharData = getCharData(item.questionerCharID);
+                startRiddle(heroCharData.name, `../lib/img/chars/${heroCharData.icon}`, questionerCharData.name, `../lib/img/chars/${questionerCharData.icon}`, `../lib/img/riddles/${item.img}`, item.answer, resolve);
+            } break;
 
             default:
             alertErr('存在しないゲーム進行の種類です。');
