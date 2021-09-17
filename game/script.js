@@ -106,6 +106,8 @@ function startRiddle(heroName, heroIconURI, questionerName, questionerIconURI, i
         let $riddle = $('#riddle');
         let $riddleImg = $('#riddleImg');
         let $riddleHintBtn = $('#riddleHintBtn');
+        let $searchArea = $('#searchArea');
+        let $riddleSearchBtn = $('#riddleSearchBtn');
         let $answerInput = $('#answerInput');
         let $background = $('#background');
 
@@ -128,6 +130,14 @@ function startRiddle(heroName, heroIconURI, questionerName, questionerIconURI, i
             }, 10000);
         });
 
+        $riddleSearchBtn.on('click', (_e) => {
+            $searchArea.css('display', 'flex');
+            $searchArea.on('click', (_e) => {
+                $searchArea.css('display', 'none');
+                $searchArea.off('click');
+            });
+        });
+
         // note: なぜか transition が効かないので 50ms 遅らせる
         setTimeout(() => {
             $riddle.css('opacity', '1');
@@ -135,16 +145,16 @@ function startRiddle(heroName, heroIconURI, questionerName, questionerIconURI, i
 
         setTimeout(() => {
             $answerInput.focus();
-
             let $answerClickBtn = $('#answerCheckBtn');
             $answerClickBtn.on('click', () => {
                 let answerInput = $('#answerInput').val();
                 // todo: 答えをフォーマットする
 
-                if(answer == answerInput) {
+                if(answer.split(',').includes(answerInput.toLowerCase())) {
                     // 正解
                     $answerClickBtn.off('click');
                     $riddleHintBtn.off('click');
+                    $riddleSearchBtn.off('click');
 
                     $riddle.css('opacity', '0');
                     $riddleImg.css('background-image', 'unset');

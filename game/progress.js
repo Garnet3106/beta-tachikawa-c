@@ -11,8 +11,8 @@ speech|huang|じゃあとりあえず会えたことだし行こうヨ
 speech|hero|え？
 speech|narrator|中国の友達のファンは会うや否や観光地に連行し →
 speech|narrator|中華料理を堪能しながら中国のことをたくさん知って欲しいらしく、中国の文化クイズを出してきた
-riddle|huang|china_1.png|china_1_hint.png|china_1_desc.png||
-riddle|huang|china_2.png|china_2_hint.png|china_2_desc.png||
+riddle|huang|china_1.png|china_1_hint.png|china_1_desc.png|ついつたー,ツイツター,ツイッター,twitter|
+riddle|huang|china_2.png|china_2_hint.png|china_2_desc.png|中秋節,ちゅうしゅうせつ|
 speech|hero|日本からそんなに遠くないのに、異文化すぎて驚いたよ！
 speech|huang|中国のことを少しでも知ってくれたのなら感謝するアル
 speech|hero|うん、日本で使えるようなSNSはだいたい使えなくて代替アプリが多く使われているなんて知らなかったし...
@@ -32,8 +32,8 @@ speech|chloe|Hello mate! 久しぶりね！
 speech|hero|久しぶりクロエ！！
 speech|narrator|友人のクロエはもっと仲良くなりたいらしく、彼女を知るためにはオーストラリアの文化を知ると特にいいらしい
 speech|narrator|そこで彼女は、自国に関するクイズを出してくれるようだ。
-riddle|chloe|australia_1.png|australia_1_hint.png|australia_1_desc.png||
-riddle|chloe|australia_2.png|australia_2_hint.png|australia_2_desc.png||
+riddle|chloe|australia_1.png|australia_1_hint.png|australia_1_desc.png|あぼりじに,アボリジニ|
+riddle|chloe|australia_2.png|australia_2_hint.png|australia_2_desc.png|うるる,ウルル|
 speech|chloe|これで大雑把にだけどオーストラリアの文化は知れたかな
 speech|hero|もちろん！やっぱり知らないことがたくさんあるんだなあって、自分が無知なんだって知ったよ
 speech|chloe|まあ行ったことがない国だと大体そんなものよね
@@ -51,9 +51,9 @@ background|turkish.png
 speech|narrator|トルコといえばケバブでしょ！！！！と思ってきたトルコ →
 speech|narrator|友達のイルハンに会い、観光をしながら文化の説明をしてくれていたが →
 speech|narrator|ただ話すだけじゃ面白くないとクイズ形式で教えようとしてくれるみたいだ
-riddle|ilhan|turkish_1.png|turkish_1_hint.png|turkish_1_desc.png||
-riddle|ilhan|turkish_2.png|turkish_2_hint.png|turkish_2_desc.png||
-riddle|ilhan|turkish_3.png|turkish_3_hint.png|turkish_3_desc.png||
+riddle|ilhan|turkish_1.png|turkish_1_hint.png|turkish_1_desc.png|けばぶ,ケバブ|
+riddle|ilhan|turkish_2.png|turkish_2_hint.png|turkish_2_desc.png|かふたん,カフタン|
+riddle|ilhan|turkish_3.png|turkish_3_hint.png|turkish_3_desc.png|さーれっぷ,サーレップ|
 speech|ilhan|Selam、ようこそトルコへ！
 speech|hero|やっほ〜イルハン！調子はどう？
 speech|ilhan|とてもいいよ！今日はすごくワクワクしてるんだ！
@@ -82,8 +82,8 @@ speech|olivia|そういえばそういえば貴方、私の国に来るのに勉
 speech|hero|全然してないよ、一応でマナーとか調べたくらい。
 speech|olivia|！じゃあ私がこの国の文化を教えてあげるわ！
 speech|narrator|圧は強かったが自国のクイズを出してくれた
-riddle|chloe|uk_1.png|uk_1_hint.png|uk_1_desc.png||
-riddle|chloe|uk_2.png|uk_2_hint.png|uk_2_desc.png||
+riddle|chloe|uk_1.png|uk_1_hint.png|uk_1_desc.png|ぼらんてぃあ,ボランティア|
+riddle|chloe|uk_2.png|uk_2_hint.png|uk_2_desc.png|victoria|
 speech|hero|ヴィクトリアケーキ美味しそう...
 speech|olivia|そうでしょう？美味しいのよ、後で食べにいきましょう
 speech|hero|やった〜！あ、あとイギリスは少し日本に似てるかもしれないね、ボランティア精神があるところとか
@@ -172,7 +172,7 @@ speech|hero|少しちょうだい
 speech|anthony|ああ一緒に食おうぜBro!
 speech|narrator|アンソニーから袋をもらうと、ある文章が目に飛び込んできた
 speech|narrator|アンソニーいわく最近流行っているクイズらしい。早速やってみることにした
-riddle|anthony|us_1.png|us_1_hint.png|us_1_desc.png||
+riddle|anthony|us_1.png|us_1_hint.png|us_1_desc.png|あめりかんふっとぼーる,アメリカンフットボール|
 speech|narrator|途中からアンソニーも参戦して2人で一心不乱に解いていた
 speech|hero|なんとか解けたね、アンソニー
 speech|anthony|ああ、結構難しいのもあったな
