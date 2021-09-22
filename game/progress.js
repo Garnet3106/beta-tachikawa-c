@@ -104,6 +104,8 @@ speech|hero|遅れてきたからびっくりしたよ！
 speech|abdul|君のためにクイズを作ってたら遅れたんだ
 speech|hero|！そっか！
 speech|narrator|主人公はほっこりした
+riddle|chloe|egypt_1.png|egypt_1_hint.png|egypt_1_desc.png|へかぶ,ヘカブ,へかふ,へカフ|
+riddle|chloe|egypt_2.png|egypt_2_hint.png|egypt_2_desc.png|るくそーる,ルクソール|
 speech|narrator|観光しながらの会話で...
 speech|hero|エジプトの世界遺産は本当にすごい。服装も日本とは違った考え方でとても勉強になった
 speech|abdul|日本とは価値観や考え方の違いが大きいからね、僕も日本の文化を聞いたときにびっくりしたよ
@@ -147,6 +149,8 @@ speech|narrator|空港まで迎えにきてくれるらしいので待ってい�
 speech|hero|イザベラ！
 speech|izabella|Oi！！！元気？
 speech|narrator|会って早々、テンションをぶち上げてきながら突然クイズを出してきた
+riddle|chloe|brazil_1.png|brazil_1_hint.png|brazil_1_desc.png|ばいあな,バイアナ|
+riddle|chloe|brazil_2.png|brazil_2_hint.png|brazil_2_desc.png|しゅらすこ,シュラスコ|
 speech|narrator|クイズに参加したので褒美としてバーベキュー(ほんとはシュラスコというらしいけど)に連れてきてもらった。
 speech|hero|たのし〜！、お肉美味しいね
 speech|izabella|シュラスコ楽しんでるみたいね！よかったわ！
@@ -173,6 +177,7 @@ speech|anthony|ああ一緒に食おうぜBro!
 speech|narrator|アンソニーから袋をもらうと、ある文章が目に飛び込んできた
 speech|narrator|アンソニーいわく最近流行っているクイズらしい。早速やってみることにした
 riddle|anthony|us_1.png|us_1_hint.png|us_1_desc.png|あめりかんふっとぼーる,アメリカンフットボール|
+riddle|anthony|us_2.png|us_2_hint.png|us_2_desc.png|すぱにっしゅ,スパニッシュ|
 speech|narrator|途中からアンソニーも参戦して2人で一心不乱に解いていた
 speech|hero|なんとか解けたね、アンソニー
 speech|anthony|ああ、結構難しいのもあったな
