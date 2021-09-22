@@ -131,7 +131,7 @@ function startRiddle(heroName, heroIconURI, questionerName, questionerIconURI, i
                 if(!invalidateImg) {
                     $riddleImg.css('background-image', `url('${imgURI}')`);
                 }
-            }, 10000);
+            }, 5000);
         });
 
         $riddleSearchBtn.on('click', (_e) => {
@@ -152,7 +152,6 @@ function startRiddle(heroName, heroIconURI, questionerName, questionerIconURI, i
             let $answerClickBtn = $('#answerCheckBtn');
             $answerClickBtn.on('click', () => {
                 let answerInput = $('#answerInput').val();
-                // todo: 答えをフォーマットする
 
                 if(answer.split(',').includes(answerInput.toLowerCase())) {
                     // 正解
@@ -171,7 +170,6 @@ function startRiddle(heroName, heroIconURI, questionerName, questionerIconURI, i
                         callback();
                     }, 1000);
                 } else {
-                    // 不正解
                     alert('不正解');
                 }
             });
