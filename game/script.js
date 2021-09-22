@@ -122,11 +122,15 @@ function startRiddle(heroName, heroIconURI, questionerName, questionerIconURI, i
         $background.css('background-blend-mode', 'darken');
         $answerInput.val('');
 
+        let invalidateImg = false;
+
         $riddleHintBtn.on('click', (_e) => {
             $riddleImg.css('background-image', `url('${hintImgURI}')`);
 
             setTimeout(() => {
-                $riddleImg.css('background-image', `url('${imgURI}')`);
+                if(!invalidateImg) {
+                    $riddleImg.css('background-image', `url('${imgURI}')`);
+                }
             }, 10000);
         });
 
@@ -161,6 +165,7 @@ function startRiddle(heroName, heroIconURI, questionerName, questionerIconURI, i
                     $background.css('background-blend-mode', 'normal');
 
                     setTimeout(() => {
+                        invalidateImg = true;
                         $riddle.css('display', 'none');
                         $subtitle.css('display', 'flex');
                         callback();
