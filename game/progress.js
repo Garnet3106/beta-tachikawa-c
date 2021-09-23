@@ -80,7 +80,7 @@ speech|olivia|Hi!遅かったね
 speech|hero|色々あってね...
 speech|olivia|そういえばそういえば貴方、私の国に来るのに勉強はしたの？
 speech|hero|全然してないよ、一応でマナーとか調べたくらい。
-speech|olivia|！じゃあ私がこの国の文化を教えてあげるわ！
+speech|olivia|じゃあ私がこの国の文化を教えてあげるわ！
 speech|narrator|圧は強かったが自国のクイズを出してくれた
 riddle|chloe|uk_1.png|hints/uk_1.png|uk_1_desc.png|ぼらんてぃあ,ボランティア,ほらんてぃあ,ホランティア|
 riddle|chloe|uk_2.png|hints/uk_2.png|uk_2_desc.png|victoria|
