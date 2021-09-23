@@ -225,7 +225,7 @@ speech|narrator|プレイしていただきありがとうございました
             },
             "narrator": {
                 "name": "",
-                "icon": "anonymous.png",
+                "icon": "narrator.png",
                 "furigana": ""
             },
             "anonymous": {
