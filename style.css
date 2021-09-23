@@ -32,22 +32,22 @@ img {
 }
 
 .header-img {
+    align-items: center;
     background-position: center;
     background-repeat: no-repeat;
-    display: block;
     height: 50vw;
+    justify-content: center;
     transition: opacity 500ms ease;
     max-height: 100vh;
     width: 100vw;
 }
 
 .header-img#headerImg {
-    background-image: url('lib/img/header.png');
+    background-image: url('lib/img/title_visual.png');
     background-size: 100vw 50vw;
 }
 
 .header-img#footerImg {
-    background-image: url('lib/img/header.png');
     background-size: 100vw 30vw;
     opacity: 0;
 }
