@@ -146,19 +146,19 @@ background|us.png
 speech|narrator|先進国のアメリカにやってきたラストの国だけにめちゃくちゃテンション上がってる
 speech|hero|（あ！あそこにいるのは...！）
 speech|anthony|Hey bro!!!調子はどうだい？
-speech|hero|ハローアンソニー！最高だよ！
+speech|hero|ハローアントニー！最高だよ！
 speech|hero|今日も片手にハンバーガー持ってるんだね
 speech|anthony|ファストフードは最高だぜ！
 speech|hero|少しちょうだい
 speech|anthony|ああ一緒に食おうぜBro!
-speech|narrator|アンソニーから袋をもらうと、ある文章が目に飛び込んできた
-speech|narrator|アンソニーいわく最近流行っているクイズらしい。早速やってみることにした
+speech|narrator|アントニーから袋をもらうと、ある文章が目に飛び込んできた
+speech|narrator|アントニーいわく最近流行っているクイズらしい。早速やってみることにした
 riddle|anthony|us_1.png|hints/us_1.png|us_1_desc.png|あめふと,アメフト,あめりかんふっとぼーる,アメリカンフットボール|
 riddle|anthony|us_2.png|hints/us_2.png|us_2_desc.png|すぱにっしゅ,スパニッシュ|
-speech|narrator|途中からアンソニーも参戦して2人で一心不乱に解いていた
-speech|hero|なんとか解けたね、アンソニー
+speech|narrator|途中からアントニーも参戦して2人で一心不乱に解いていた
+speech|hero|なんとか解けたね、アントニー
 speech|anthony|ああ、結構難しいのもあったな
-speech|hero|アンソニーはアメフトとかやるの？
+speech|hero|アントニーはアメフトとかやるの？
 speech|anthony|俺はバスケか野球派だな
 speech|hero|そっか〜アメリカではその二つもメジャーなスポーツだもんね
 speech|anthony|ああ、特に野球は日本人のオオタニが熱いぜ！
@@ -166,8 +166,8 @@ speech|hero|ああ！すごいよね！
 speech|hero|あとアメリカには色々な人種がいるんだね
 speech|anthony|アメリカは多民族国家だからな〜
 speech|hero|本当にたくさんの人種の人がいるんだ！
-speech|narrator|アンソニーが家に泊めてくれるらしいので、アンソニーの家に向かっている途中、子供だけしか乗っていないバスを見かけた。
-speech|hero|アンソニー、あれは何？
+speech|narrator|アントニーが家に泊めてくれるらしいので、アントニーの家に向かっている途中、子供だけしか乗っていないバスを見かけた。
+speech|hero|アントニー、あれは何？
 speech|anthony|あああれか、あれはスクールバスだぜ、アメリカは人が多いから犯罪も多くてな、特に子供なんかは狙われやすいんだ。だから小中高生なんかはあれに乗って帰るんだ
 speech|hero|そうなんだ〜怖いね...
 speech|narrator|帰国の時
@@ -246,7 +246,7 @@ speech|narrator|プレイしていただきありがとうございました
                 "furigana": ""
             },
             "anthony": {
-                "name": "アンソニー",
+                "name": "アントニー",
                 "icon": "anthony.png",
                 "furigana": ""
             }
