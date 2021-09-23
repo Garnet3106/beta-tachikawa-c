@@ -246,7 +246,7 @@ speech|narrator|プレイしていただきありがとうございました
                 "furigana": ""
             },
             "anthony": {
-                "name": "アントニー",
+                "name": "アンソニー",
                 "icon": "anthony.png",
                 "furigana": ""
             }
