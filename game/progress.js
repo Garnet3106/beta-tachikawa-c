@@ -117,13 +117,6 @@ speech|abdul|絶対またきてね、待ってるよ
 speech|hero|もちろん、日本にもさ遊びに来てよ
 speech|abdul|！...うん！！
 speech|narrator|アヴドゥルと離れるのは少し寂しかったけど、別れを惜しみつつ飛行機に乗った。うん
-speech|narrator|空港にて
-speech|abdul|もう帰っちゃうんだね、さみしいな
-speech|hero|「短い間だったけど、楽しかったよ
-speech|abdul|絶対またきてね、待ってるよ
-speech|hero|もちろん、日本にもさ遊びに来てよ
-speech|abdul|！...うん！！
-speech|narrator|アヴドゥルと離れるのは少し寂しかったけど、別れを惜しみつつ飛行機に乗った。
 move|brazil
     `;
 
