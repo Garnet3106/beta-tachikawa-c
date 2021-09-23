@@ -67,7 +67,7 @@ speech|ilhan|お兄さん、この子に占いやってもらってもいい？
 speech|augur|イイヨ〜そこに座りな
 speech|hero|お願いします
 speech|augur|あ〜これは...
-speech|augur|詳しくはわからないけど結果はよくないみたい。乗り物が遅れる？らしい。
+speech|narrator|詳しくはわからないけど結果はよくないみたい。乗り物が遅れる？らしい。
 move|uk
     `;
 
