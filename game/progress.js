@@ -83,7 +83,7 @@ speech|hero|全然してないよ、一応でマナーとか調べたくらい�
 speech|olivia|じゃあ私がこの国の文化を教えてあげるわ！
 speech|narrator|圧は強かったが自国のクイズを出してくれた
 riddle|chloe|uk_1.png|hints/uk_1.png|uk_1_desc.png|ぼらんてぃあ,ボランティア,ほらんてぃあ,ホランティア|
-riddle|chloe|uk_2.png|hints/uk_2.png|uk_2_desc.png|victoria|
+riddle|chloe|uk_2.png|hints/uk_2.png|uk_2_desc.png|victoria,びくとりあ,ビクトリア,ゔぃくとりあ,ヴィクトリア|
 speech|hero|ヴィクトリアケーキ美味しそう...
 speech|olivia|そうでしょう？美味しいのよ、後で食べにいきましょう
 speech|hero|やった〜！あ、あとイギリスは少し日本に似てるかもしれないね、ボランティア精神があるところとか
