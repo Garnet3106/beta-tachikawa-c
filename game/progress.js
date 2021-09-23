@@ -51,14 +51,14 @@ background|turkish.png
 speech|narrator|トルコといえばケバブでしょ！！！！と思ってきたトルコ →
 speech|narrator|友達のイルハンに会い、観光をしながら文化の説明をしてくれていたが →
 speech|narrator|ただ話すだけじゃ面白くないとクイズ形式で教えようとしてくれるみたいだ
-riddle|ilhan|turkish_1.png|hints/turkish_1.png|turkish_1_desc.png|けばぶ,ケバブ|
-riddle|ilhan|turkish_2.png|hints/turkish_2.png|turkish_2_desc.png|かふたん,カフタン|
-riddle|ilhan|turkish_3.png|hints/turkish_3.png|turkish_3_desc.png|さーれっぷ,サーレップ|
 speech|ilhan|Selam、ようこそトルコへ！
 speech|hero|やっほ〜イルハン！調子はどう？
 speech|ilhan|とてもいいよ！今日はすごくワクワクしてるんだ！
 speech|hero|ワクワク？それはどうして？
 speech|ilhan|君を楽しませてあげようと思ってクイズを作ってきたからさ！
+riddle|ilhan|turkish_1.png|hints/turkish_1.png|turkish_1_desc.png|けばぶ,ケバブ|
+riddle|ilhan|turkish_2.png|hints/turkish_2.png|turkish_2_desc.png|かふたん,カフタン|
+riddle|ilhan|turkish_3.png|hints/turkish_3.png|turkish_3_desc.png|さーれっぷ,サーレップ|
 speech|narrator|謎の伸びるアイスがあった、味と見た目の両方で楽しむ事ができたので、とても満足した！日本でも探してみよう。
 speech|hero|(トルコ料理おいしいなあ...)
 speech|hero|(民族衣装も質素な感じでおしゃれだ)
