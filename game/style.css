@@ -145,9 +145,9 @@ body > .content > .background > .riddle > .content {
 }
 
 body > .content > .background > .riddle > .content > .image {
-    background-position: 100% 100%;
-    background-repeat: none;
-    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
     border-radius: 10px;
     height: 20vw;
     max-height: 45vh;
