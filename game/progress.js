@@ -126,8 +126,8 @@ speech|narrator|空港まで迎えにきてくれるらしいので待ってい�
 speech|hero|イザベラ！
 speech|izabella|Oi！！！元気？
 speech|narrator|会って早々、テンションをぶち上げてきながら突然クイズを出してきた
-riddle|chloe|brazil_1.png|brazil_1.png|brazil_1_desc.png|ばいあな,バイアナ|
-riddle|chloe|brazil_2.png|brazil_2.png|brazil_2_desc.png|しゅらすこ,シュラスコ|
+riddle|chloe|brazil_1.png|hints/brazil_1.png|brazil_1_desc.png|ばいあな,バイアナ|
+riddle|chloe|brazil_2.png|hints/brazil_2.png|brazil_2_desc.png|しゅらすこ,シュラスコ|
 speech|narrator|クイズに参加したので褒美としてバーベキュー(ほんとはシュラスコというらしいけど)に連れてきてもらった。
 speech|hero|たのし〜！、お肉美味しいね
 speech|izabella|シュラスコ楽しんでるみたいね！よかったわ！
